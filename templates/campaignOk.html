@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Is Campaign Ok</h1>
+<p>Input Example: [campaign] 20000, 10, 20, 20 은 어때?</p>
+<form method="POST">
+    <label for="input">Enter your input:</label><br>
+    <input type="text" id="input" name="input"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if output %}
+<div style="border: 2px solid blue; padding: 10px; margin-top: 20px;">
+    <p><strong>System Output:</strong></p>
+    <p>{{ output }}</p>
+</div>
+{% endif %}
+
+{% endblock %}
